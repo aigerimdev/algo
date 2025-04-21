@@ -1,6 +1,6 @@
 def count_occur(inp, target):
-    
     counter = 0 
+    
     for char in inp:
         if char == target:
             counter += 1

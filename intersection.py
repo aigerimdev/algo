@@ -8,7 +8,14 @@ def get_intersection(list1, list2):
 
     return intersection
 
+def get_intersection(list1, list2):
+    intersection = []
 
+    for num in list2:
+        if num in list1:
+            intersection.append(num)
+
+    return intersection
 #An example of a working implementation:
 
 def get_intersection(red, blue):

@@ -9,3 +9,19 @@ def get_symmetric_pairs(pairs):
         else:
             map[num1] = num2
     return symmetric_pairs
+
+def get_symmetric_pairs(pairs):
+    pairs_map = {}
+
+    for pair in pairs:
+        pairs_map[pair[0]] = pair[1]
+
+    symmetric_pairs = []
+
+    for pair in pairs:
+        key, val = pair[0], pair[1]
+        if pairs_map.get(val) == key:
+            symmetric_pairs.append([key, val])
+            pairs_map.pop(key)
+
+    return symmetric_pairs

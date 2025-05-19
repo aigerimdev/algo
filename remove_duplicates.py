@@ -10,3 +10,4 @@ def remove_duplicates(nums):
 
         return i + 1
 print(remove_duplicates([1, 1, 2]))
+

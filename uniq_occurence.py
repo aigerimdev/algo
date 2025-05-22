@@ -1,19 +1,19 @@
-def unique_occurence(arr):
+def unique_occurrence(arr):
+    # create a hash table to see frequency of items {"1": 3}
     hash_table = {}
-    # count how many times each number appears
     for num in arr:
         if num in hash_table:
-            hash_table[num] += 1
+            hash_table[num]+= 1
         else:
             hash_table[num] = 1
+        
+    # gets how many times each number appeared [3, 2, 2]
+    all_counts = hash_table.values() 
+    unique_counts = set(all_counts) # {2, 3}
 
-    # check for unique counts
-    seen = set()
-    for count in hash_table.values():
-        if count in seen:
-            return False
-        seen.add(count)
+    if len(unique_counts) == len(all_counts):
+        return True
+    else:
+        return False
 
-    return True
-
-print(unique_occurence([1,2,2,1,1,3,3]))
+print(unique_occurrence([1,2,2,1,1,3,3]))

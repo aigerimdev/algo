@@ -16,3 +16,5 @@ def longestCommonPrefix(strs):
     return common_prefix
     
 print(longestCommonPrefix(["flower","flow","flight"]))
+print(longestCommonPrefix(["prefix", "", "prelude"]))
+print(longestCommonPrefix(["test", "test", "test"]))

@@ -1,6 +1,7 @@
 def removeElement(nums, val):
     if not nums:
-        return 0 
+        return 0
+    
     counter = 0
     for num in nums:
         if num != val:

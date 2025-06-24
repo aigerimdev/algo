@@ -15,6 +15,12 @@
 # Explanation: There is no common prefix among the input strings.
 
 def longest_common_prefix(words):
+    # loop trough the list of str
+    # group the characters by indexes
+    # use set to check if the chars are the same
+    # if it is the add that char to result var
+    # otherwise stop
+    # return that result var
     common_prefix = ''
     for chars in zip(*words):
         single_chars = set(chars)
